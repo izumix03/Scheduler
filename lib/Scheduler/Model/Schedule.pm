@@ -5,6 +5,7 @@ use utf8;
 
 use parent qw/Scheduler::Model/;
 
+# raild like なモデル？モデルじゃない気がするけどMouse入れるまでは記事通りこれはModelと命名
 sub all {
     my ($class, $order_param) = @_;
 
