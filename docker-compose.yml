@@ -1,0 +1,15 @@
+version: '3'
+
+volumes:
+  local:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: scheduler
+    volumes:
+      - .:/app
+      - local:/app/local
+    tty: true
