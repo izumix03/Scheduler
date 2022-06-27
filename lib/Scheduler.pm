@@ -9,7 +9,7 @@ use Scheduler::DB;
 
 use parent qw/Amon2/;
 # Enable project local mode.
-__PACKAGE__->make_local_context();
+# __PACKAGE__->make_local_context();
 
 my $schema = Scheduler::DB::Schema->instance;
 
@@ -28,6 +28,15 @@ sub db {
         );
     }
     $c->{db};
+}
+
+sub model {
+    my ($c, $model_name) = @_;
+
+    my $module_name = 'Scheduler::Model::' . $model_name;
+    eval "require $module_name";
+
+    return $module_name->new;
 }
 
 1;

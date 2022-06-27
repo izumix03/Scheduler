@@ -7,8 +7,7 @@ use Time::Piece;
 
 any '/' => sub {
     my ($c) = @_;
-    my $order = lc $c->req->parameters->{order} eq 'reverse' ? 'date' : 'date DESC';
-    my @schedules = $c->db->search('schedules', {}, { order_by => $order });
+    my @schedules = $c->model('Schedule')->all($c->req->parameters->{order});
 
     return $c->render('index.tx', { schedules => \@schedules });
 };

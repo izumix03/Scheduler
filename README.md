@@ -15,3 +15,8 @@ carton exec -- plackup -Ilib -R ./lib --access-log /dev/null -p 5000 -a ./script
 ```shell
 sqlite3 db/development.db < sql/sqlite.sql
 ```
+
+## テスト
+```shell
+carton exec prove
+```
