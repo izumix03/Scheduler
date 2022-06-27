@@ -184,4 +184,5 @@ inc/
 /pm_to_blib
 /*.zip
 
+/local
 # End of https://www.toptal.com/developers/gitignore/api/macos,perl,intellij
