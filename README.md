@@ -18,5 +18,5 @@ sqlite3 db/development.db < sql/sqlite.sql
 
 ## テスト
 ```shell
-carton exec prove
+carton exec prove t
 ```

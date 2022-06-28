@@ -11,6 +11,7 @@ sub all {
 
     my $order = lc ($order_param || '') eq 'reverse' ? 'date' : 'date DESC';
 
-    return $class->db->search('schedules', {}, { order_by => $order });
+    return $class->db->search('schedules', {}, { order_by => $order })->all;
 }
+
 1;
