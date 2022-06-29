@@ -27,6 +27,7 @@
     <thead>
         <tr>
             <th>タイトル</th>
+            <th>タイトル詳細</th>
             <th>日時</th>
             <th></th>
         </tr>
@@ -34,6 +35,7 @@
     <tbody>
     : for $schedules -> $schedule {
         <tr>
+            <td><: $schedule.summary_title :></td>
             <td><: $schedule.title :></td>
             <td><: $schedule.date.strftime("%Y/%m/%d") :></td>
             <td>

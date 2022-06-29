@@ -30,10 +30,10 @@ sub db {
     $c->{db};
 }
 
-sub model {
+sub repository {
     my ($c, $model_name) = @_;
 
-    my $module_name = 'Scheduler::Model::' . $model_name;
+    my $module_name = 'Scheduler::Repository::' . $model_name;
     eval "require $module_name";
 
     return $module_name->new;

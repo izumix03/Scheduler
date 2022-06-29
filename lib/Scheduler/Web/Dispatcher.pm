@@ -7,7 +7,7 @@ use Time::Piece;
 
 any '/' => sub {
     my ($c) = @_;
-    my @schedules = $c->model('Schedule')->all($c->req->parameters->{order});
+    my @schedules = $c->repository('Schedule')->all($c->req->parameters->{order});
 
     return $c->render('index.tx', { schedules => \@schedules });
 };

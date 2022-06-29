@@ -1,4 +1,4 @@
-package Scheduler::Model;
+package Scheduler::Repository;
 use strict;
 use warnings;
 use utf8;
